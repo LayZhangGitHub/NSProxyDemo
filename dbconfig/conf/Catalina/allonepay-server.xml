@@ -1,0 +1,11 @@
+<Context path="/allonepay-server">
+	<Resource auth="Container" name="jdbc/allonepay-server" type="javax.sql.DataSource"
+		factory="org.objectweb.jotm.datasource.DataSourceFactory"
+		driverClassName="com.mysql.jdbc.Driver" username="root" password="888888"
+		url="jdbc:mysql://192.168.0.55:13306/allonepay?characterEncoding=UTF-8"
+		max="50" maxWait="-1" testStmt="select 1" checkLevel="2" />
+	<Resource name="UserTransaction" auth="Container"
+		type="javax.transaction.UserTransaction" />
+	<Transaction factory="org.objectweb.jotm.UserTransactionFactory"
+		jotm.timeout="60" />
+</Context>
