@@ -21,6 +21,9 @@
     [proxy provideAWithName:@"product A"];
     [proxy provideBWithName:@"product B"];
     
+    // 若方法名相同， 则调用的是后注册的。
+    [proxy performSelector:@selector(test)];
+    
     
 //    ProductAProvider *provider = [[ProductAProvider alloc] init];
 //    ProductBProvider *providerB = [[ProductBProvider alloc] init];

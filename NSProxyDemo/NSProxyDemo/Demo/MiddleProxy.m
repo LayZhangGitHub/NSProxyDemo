@@ -44,6 +44,8 @@
     
     Method *method_list = class_copyMethodList([target class], &methodNumber);
     
+    // 因为使用 方法名 为Key
+    // 所以 当方法名相同时， 调用后注册的
     for (int i = 0; i < methodNumber; i ++) {
         
         Method temp_method = method_list[i];
